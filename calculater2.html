@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>simple calculater</title>
+       <style>
+        input[type="text"]{
+            width:200px;
+            font-size:20px;
+            text-align:right;
+
+        }
+        input[type="butten"]{
+            widht:50px;
+            height:50px;
+            font-size:20px;
+        }
+        a{
+            color:#000;
+
+        }
+       </style>
+    </head>
+    <body>
+        <h1>calculater</h1>
+        <input type="text"id="display"disabled>
+        <br>
+        <input type="butten"value="7"onclick="appendToDisplay('7')">
+        <input type="butten"value="8"onclick="appendToDisplay('8')"
+        <input type="butten"value="9"onclick="appendToDisplay('9')">
+        <input type="butten"value="/"onclick="appendToDisplay('/')">
+        <br>
+        <input type="butten"value="4"onclick="appendToDisplay('4')">
+        <input type="butten"value="5"onclick="appendToDisplay('5')"
+        <input type="butten"value="6"onclick="appendToDisplay('6')">
+        <input type="butten"value="*"onclick="appendToDisplay('*')">
+         <br>
+         <input type="butten"value="1"onclick="appendToDisplay('1')">
+         <input type="butten"value="2"onclick="appendToDisplay('2')"
+         <input type="butten"value="3"onclick="appendToDisplay('3')">
+         <input type="butten"value="+"onclick="appendToDisplay('+')">
+         <br>
+         <input type="butten"value="0"onclick="appendToDisplay('0')">
+         <input type="butten"value="."onclick="appendToDisplay('.')"
+         <input type="butten"value="="onclick="calculate()">
+         <input type="butten"value="-"onclick="appendToDisplay('-')">
+         <br>
+         <input type="butten"value="c"onclick="clearDisplay()">
+         <br>
+         <br>
+         <br>
+         <a herf="celsius.html">Convert to Celsius</a>
+         <script>
+            function appendToDisplay(value){
+                document.getElementById('display').value+=value;
+            }
+            function clearDisplay(value){
+                document.getElementById('display').value='';
+
+            }
+
+            function calculate  (){
+                try{
+                    document.getElementById('display').value=eval(document.getElementById('display').value);
+                } catch(error){
+                    document.getElementById('display').value='error';
+                }
+            }
+
+
+         </script>
+
+    </body>
+</html>
